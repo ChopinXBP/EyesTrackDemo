@@ -8,6 +8,7 @@ Camera2Fragment人眼跟踪移植流程
 建议.java直接在工程中拷贝，如果在文件管理器内拷贝要注意修改包名；.xml建议直接新建再复制内容。
 
 
+
 **2.对照修改AndroidManifest.xml**
 
 添加可能用上的权限说明。
@@ -19,9 +20,13 @@ Camera2Fragment人眼跟踪移植流程
 <uses-feature android:name="android.hardware.camera.autofocus" />
 ```
 
+
+
 **3.修改fragment_camera2_basic.xml**
 
 修改包名com.dhht.serialportutil.AutoFitTextureView为当前包名
+
+
 
 **4.对照修改最上层显示xml**
 
@@ -38,6 +43,8 @@ Camera2Fragment人眼跟踪移植流程
     android:text="container" />
 ```
 
+
+
 **5.修改其他配置xml**
 
 在string.xml添加：
@@ -46,6 +53,8 @@ Camera2Fragment人眼跟踪移植流程
 <string name="camera_error">This device doesn\'t support Camera2 API.</string>
 ```
 不是很重要，只是为了解决一点报错，可以直接在报错点修改。
+
+
 
 **6.添加依赖库**
 
@@ -76,7 +85,10 @@ dependencies {
 }
 ```
 
+
+
 **7.外部调用**
+
 在xml对应的顶层Activity上使用如下代码调用
 ```
 //人眼跟踪
@@ -98,5 +110,8 @@ public void process(int location) {
 }
 ```
 
+
+
 **8.权限开启**
+
 如果第一次开启软件没有及时打开权限，记得在系统软件管理里打开。
