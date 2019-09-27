@@ -1,5 +1,10 @@
 # EyesTrackDemo
-Camera2Fragment人眼跟踪移植流程
+
+EyesTrackDemo移植流程
+
+基于Android Camera2的人眼跟踪Demo，可作为Fragment复用于其他APP，实现透明的后台人眼跟踪。
+
+---
 
 **1.文件添加**
 
@@ -115,3 +120,10 @@ public void process(int location) {
 **8.权限开启**
 
 如果第一次开启软件没有及时打开权限，记得在系统软件管理里打开。
+
+
+---
+
+by NJU-ChopinXBP
+
+xiaobangpeng@nju.edu.cn
